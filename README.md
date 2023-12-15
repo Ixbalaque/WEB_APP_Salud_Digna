@@ -30,7 +30,8 @@ App  que predice un enfermedad cardiovascular en base a maching learing
          git clone
 
 3) Ejecucicion de la APP
-   2.3) Instale el archivo requirements.txt
+
+   3.3) Instale el archivo requirements.txt
         pip install -r requirements.txt
    3.3) Ejecute la app
         python3 run.py

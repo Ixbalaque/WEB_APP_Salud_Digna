@@ -23,4 +23,14 @@ App  que predice un enfermedad cardiovascular en base a maching learing
 
 2) Clona el repositorio de Github     
     
-    2.1) 
+    2.1) Descargar GitHub en caso de no tenerlo descargado
+         sudo apt-get update
+         sudo apt-get install git
+   2.2)Clonar el repositorio en su carpeta previamente creada
+         git clone
+
+3) Ejecucicion de la APP
+   2.3) Instale el archivo requirements.txt
+        pip install -r requirements.txt
+   3.3) Ejecute la app
+        python3 run.py

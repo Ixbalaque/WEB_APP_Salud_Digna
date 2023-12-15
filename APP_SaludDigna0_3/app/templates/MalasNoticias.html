@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&family=Lobster&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/estilos.css') }}">
+  <script src="{{ url_for('static',filename='js/script.js') }}"></script>
+  <title>Malas Noticias</title>
+</head>
+
+<body class="Noticias">
+
+<div class="contenedor-centrado">
+  <div class="elemento-centrado">
+    <!-- Tu contenido aquí -->
+    <img src="{{ url_for('static', filename='css/Corazon_Reparacion.jpg') }}" alt="Robot Medico" id="Robot">
+    <h1>Tenemos MALAS NOTICIAS para Usted: </h1>
+    <p>Nuestro Modelo inidca que Si padece de una enfermedad Cardiaca.  Sin embargo recomedamos acudir a un profesional de la Salud para Aclarar Cualquier Inquietud al Respecto </p>
+    <a href="{{ url_for('main.Salud_Digna') }}"> Regresar</p>
+  </div>
+</div>
+
+</body>
+</html>

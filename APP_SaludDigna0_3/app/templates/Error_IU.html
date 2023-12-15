@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&family=Lobster&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/estilos.css') }}">
+  <script src="{{ url_for('static',filename='js/script.js') }}"></script>
+  <title>Error</title>
+</head>
+<body class = "Pag_Error">
+
+  <img src="{{ url_for('static', filename='css/L_Error.jpeg') }}" alt="Robot Medico" id="Robot">
+  
+  <div class="contenedor-centrado-error">
+  <div class="elemento-centrado">
+    <!-- Tu contenido aquí -->
+   
+    <h2>El Usuario que ingreso no existe o la contraseña es incorrecta favor de verificar </h2>
+   
+  </div>
+</div>
+<a class="boton" href="{{ url_for('main.Login') }}"> Regresar</a> 
+</body>
+</html>

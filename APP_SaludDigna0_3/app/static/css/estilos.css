@@ -1,0 +1,317 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('f_Login.jpg');
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body.SaludDigna {
+    background-image: url('f_SaludDigna.jpg');
+}
+
+body.Noticias {
+    background-image: url('f_Noticias.jpg');
+    margin: 0;
+    height: 100vh; /* Esto asegura que el body ocupe toda la altura visible del viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body.Pag_Error{
+    background-image: url('FError.jpg');
+    margin: 0;
+    height: 100vh; /* Esto asegura que el body ocupe toda la altura visible del viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+#logo {
+    width: 80px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+#Jefe_Corpo{
+    width: 200px;
+    border-radius: 10px;
+}
+
+#Robot{
+    margin: 10px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+#Robot_Corazon{
+    margin: 10px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+#Corazon_Reparacion{
+    margin: 10px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+#Corazon_Sano{
+    margin: 10px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+#titulo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    font-weight: bold;
+    display: inline;
+    margin: 0;
+    margin-left: 4px;
+    color: #fff;
+}
+
+.encabezado {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+input[type="text"    ],
+input[type="password"],
+input[type="email"   ],
+input[type="submit"  ] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    display: flex;
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+label {
+    display: block;
+    padding: 10px; /* Ajusta el relleno según tus preferencias */
+    color : #333;
+}
+
+/***************** Salud Digna ***************/
+
+.barra-navegacion {
+    background-color: #333;
+    color: #fff;
+    overflow: hidden;
+    border-top: 2px solid #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+    width: 90px;        
+    flex-shrink: 0;
+}
+
+.barra-navegacion a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.barra-navegacion a:hover {
+    background-color: #555;
+}
+
+.barra-navegacion a.selected {
+    background-color: #4caf50;
+}
+
+.contenedor-principal {
+    display: flex;
+    flex: 1;
+    padding: 0px;
+}
+
+.contenidoPag {
+    position: relative;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex:1;
+    align-items: center;
+    justify-content: center;
+}
+
+.Ocultar_Elementos{
+   display: none;
+} 
+
+/********** Encuesta ***********/
+#encuestaForm
+{
+    background-color: rgba(255, 255, 255, 0.8);
+    padding:10px;
+    border-radius: 20px;   
+}
+
+.containerEncuesta
+{   
+   columns: 2; /* Establece el número de columnas */
+   column-gap: 10px; /* Espacio entre columnas */
+}
+
+.radio-group {
+    justify-content: left;   
+    align-items: center;
+    display: flex;
+    margin-bottom: 16px;
+}
+
+
+.contenedor-centrado {
+    background-color: #f0f0f0;
+    /* Para centrar verticalmente (en el eje transversal) */
+    width:  650px; /* Ajusta el ancho según tus necesidades */
+    height: 500px; /* Ajusta la altura según tus necesidades */
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+.contenedor-centrado-error {
+    background-color:  rgba(240, 240, 240, 0.5);
+    /* Para centrar verticalmente (en el eje transversal) */
+    width:  650px; /* Ajusta el ancho según tus necesidades */
+    height: 50px; /* Ajusta la altura según tus necesidades */
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.elemento-centrado {
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    text-align: left; 
+}
+
+.elemento-centrado img {
+    width: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.elemento-centrado p {
+
+    color: #333;
+    margin: 10px;
+}
+
+.elemento-centrado a {
+    padding: 10px;
+    background-color: #45a049;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.elemento-centrado a:hover {
+    background-color: #4caf50;
+}
+
+/*************** Modificar Datos Usuario ***********/
+
+#modDataUser{
+  background-color: #f0f0f0;  
+}
+
+/*************** Contacto ************/
+#DataContacto{
+    background-color: #f0f0f0;
+    padding: 10px;
+    flex: 1; /* Hace que ocupe todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+}
+
+.miSeccion {
+    margin-top: 50px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.informacionPersonal {
+    text-align: center;
+}
+
+.informacionPersonal h1 {
+    color: #333;
+}
+
+.informacionPersonal p {
+    color: #666;
+}
+
+.informacionPersonal img {
+    width: 200px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.politicas {
+    margin-top: 20px;
+}
+
+.politicas h2 {
+    color: #333;
+}
+
+.politicas p {
+    color: #666;
+}
+
+.boton{
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    border-color: #666;
+    border-radius: 5px;
+}
+.boton  a:hover{
+    background-color: #4caf50;
+
+}

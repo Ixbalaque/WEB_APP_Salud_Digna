@@ -1,0 +1,201 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&family=Lobster&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/estilos.css') }}">
+    <script src="{{ url_for('static',filename='js/script.js') }}"></script>
+    <title>Salud Digna - Iniciar Sesión</title>
+</head>
+
+<body class = "SaludDigna" >
+    
+    <div class="encabezado">
+        <img src="{{ url_for('static', filename='css/Logo.jpeg') }}" alt="Logo" id="logo">
+        <span id="titulo">Salud Digna</span>
+    </div>
+    
+        
+    <div class="contenedor-principal">
+         
+        <!-- Barra Navegacion -->
+
+        <div class="barra-navegacion">
+            <a  onclick="mostrarContenido('test')"     >Test</a>
+            <a  onclick="mostrarContenido('cuenta')"   >Cuenta</a>
+            <a  onclick="mostrarContenido('contacto')" >Contacto</a>
+        </div>
+
+
+        <div class="contenidoPag">
+        <!-- Contenido del contenedor principal -->
+            
+
+            <!-- Encuesta -->
+            <div id="encuestaForm" class = "Ocultar_Elementos" >
+                
+                <p> Test </p> 
+                
+                <form  class = "containerEncuesta"  action="{{ url_for('main.submit_form_Encuesta') }}" method="post"  >
+                    <label for="edad">1) Edad:</label>
+                    <input type="number" id="edad" name="edad" required min="1" max= "150">
+                    
+                    <label for="Sexo">2) Sexo:</label>
+                    <select id="Sexo" name="Sexo" required>
+                        <option value="3" selected hidden>Seleccione su Sexo</option>
+                        <option value="1">Hombre</option>
+                        <option value="0">Mujer</option>
+                    </select>
+
+            
+                    <label>3) ¿Presenta dolor en el pecho ocasionalmente?</label>
+                    <div class="radio-group" >
+                        <input type="radio" id="dolor0" name="dolor" value="0" required>
+                        <label for="dolor0">Nada</label>
+            
+                        <input type="radio" id="dolor1" name="dolor" value="1" required>
+                        <label for="dolor1">Poco</label>
+            
+                        <input type="radio" id="dolor2" name="dolor" value="2" required>
+                        <label for="dolor2">A veces</label>
+            
+                        <input type="radio" id="dolor3" name="dolor" value="3" required>
+                        <label for="dolor3">Siempre</label>
+                    </div>
+            
+                    <label>4) Sabe cuál es su nivel de azúcar en ayunas:</label>
+                    <div class="radio-group" >
+                        <input type="radio" id="inferior_0" name="azucar" value="0" required>
+                        <label for="inferior_0">Inferior a 120 mg/dL</label>
+                    
+                        <input type="radio" id="mayor_1" name="azucar" value="1" required>
+                        <label for="mayor_1">Mayor a 120 mg/dL</label>
+                    </div>
+            
+                    <label>5) Electrocardiograma en reposo:</label>
+                    <div class="radio-group" >
+                        <input type="radio" id="El_0" name="Electrocardiograma" value="0" required>
+                        <label for= "El_0">Precencia Normal</label>
+                    
+                        <input type="radio" id="El_1" name="Electrocardiograma" value="1" required>
+                        <label for="El_1">Presencia anormalidades </label>
+                    
+                        <input type="radio" id="El_2" name="Electrocardiograma" value="2" required>
+                        <label for="El_2">Presencia anormalidades significativas</label>
+                    </div>
+            
+            
+                    <label>6) Máximo ritmo cardíaco alcanzado:</label>
+                    <input type="number" id="ritmoCardiaco" name="ritmoCardiaco" required min="20" max="300" >
+            
+                    <label>7) ¿Presenta Angina inducida por ejercicio?</label>
+                    <div class="radio-group" >
+                        <input type="radio" id="siAngina" name="angina" value="1" required>
+                        <label for="siAngina">Sí</label>   
+            
+                        <input type="radio" id="noAngina" name="angina" value="0" required>
+                        <label for="noAngina">No</label>
+                    </div>
+            
+                    <label>8) Nivel de Depresión del segmento ST inducida por el ejercicio en comparación con el reposo:</label>
+                    <input type="number" id="depresionST" name="depresionST" required min="0" max="40">
+            
+                    <label>9) ¿Cómo es la Pendiente del segmento ST durante el ejercicio?</label>
+                    <select id="pendienteST" name="pendienteST" required>
+                        <option value="0">La misma que en reposo</option>
+                        <option value="1">Casi igual</option>
+                        <option value="2">Un poco diferente</option>
+                        <option value="3">Diferente</option>
+                    </select>
+            
+                    <label>10) Número de vasos principales coloreados por fluoroscopia:</label>
+                    <div class="radio-group">
+            
+                        <input type="radio" id="vFlou0" name="vFlou" value="0" required>
+                        <label for="vFlou0">0</label>   
+            
+                        <input type="radio" id="vFlou1" name="vFlou" value="1" required>
+                        <label for="vFlou1">1</label>   
+                    
+                        <input type="radio" id="vFlou2" name="vFlou" value="2" required>
+                        <label for="vFlou2">2</label>   
+            
+                        <input type="radio" id="vFlou3" name="vFlou" value="3" required>
+                        <label for="vFlou3">3 o mas</label>   
+                    </div> 
+
+                    <button type="submit" >Enviar Encuesta</button>
+                
+                </form>
+                 
+            
+            </div>
+            
+            <div id="Mensaje_Res" class="contenedor-centrado" >
+                
+                <div  class= "elemento-centrado" >
+                    <h2>De acuerdo a nustras predicciones:, {{ data if data else 'Error' }} </h2>
+                    <button type="button"  onclick=Aceptar_Resultado() id="Aceptar_Resultado"  >Aceptar</button>
+                </div>
+                              
+            </div>
+            
+            <!-- Datos Cuenta -->
+            <div id="modDataUser" class= "Ocultar_Elementos">
+               <h2>Bienvenido, {{ data.usuario if data else 'Usuario Desconocido' }} </h2>            </h2> 
+               <p>Ingrese la contrasena para modificar sus datos</p>
+               <form id="formModDataUser" >
+                    
+                    <input style="display: none;" type="text" id="key_R" name="key_R" placeholder="{{ data.user }}" r>
+    
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre_R" name="nombre" placeholder="{{ data.nombre }}" >
+
+                    <label for="usuario">Usuario:</label>
+                    <input type="text" id="usuario_R" name="usuario" placeholder="{{ data.usuario }}" >
+                     
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo_R" name="correo" placeholder="{{ data.email }}" >
+
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena_R" name="contrasena" placeholder="Contraseña" required>
+
+                    <button type="button" onclick="Actualizar_DataUser('{{ data.usuario }}')">Guardar Cambios</button>
+                </form>
+
+                <div id="Mensaje_SolicitudNewUser"></div>
+
+            </div>
+  
+            <!-- Contacto -->
+            <div id = "DataContacto" class="Ocultar_Elementos">
+                 <section class="miSeccion">
+                    <div class="informacionPersonal">
+                        <h1>Director en Jefe:</h1>
+                        <h1>Daniel Ixbalanque Popoca Zuñiga</h1>
+                        <p>Correo de contacto: danixbalanquepz@gmail.com</p>
+                        <img src="{{ url_for('static', filename='css/Jefe_Corpo.jpeg') }}" alt="Imagen de contacto" id="Jefe_Corpo">
+
+                    </div>
+                    
+                    <div class="politicas">
+                        <h2>Políticas de uso: Software Libre</h2>
+                        <p> 
+                            Esta aplicación tiene como principal objetivo tratar de predecir 
+                            el padecimiento de una enfermedad cardiaca con base en técnicas de 
+                            machine learning  (aprendizaje automático);  queda bajo su responsabilidad 
+                            la interpretación de los resultados  test. Siempre recomendamos acudir a un 
+                            profesional de la salud para tener una interpretación correcta.    
+                            Por parte de Salud Digna le agradecemos hacer uso de nuestra app.
+                        </p>
+                    </div>
+                </section>                
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
